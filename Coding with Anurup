@@ -1,0 +1,32 @@
+//Here u can see the average of numbers of a array and also find the greater numbers than the average number in a array// 
+#include<stdio.h>
+main()
+{
+	int a[10],n,i,big,small;
+	float avg,s=0;
+
+	printf("Enter the array size of array[A]:");
+	scanf("%d",&n);
+	
+	printf("Enter the array elements:\n");
+	for(i=0;i<n;i++)
+	scanf("\n%d",&a[i]);
+	
+	for(i=0;i<n;i++)
+	s+=a[i];
+	printf("sum of this array is=%f\n",s);
+	
+	printf("Now this is the avarge of this array=");
+	avg=s/n;
+	printf("%f",avg);
+	
+	printf("\nNow which numbers are bigger than avarage number in array:\n");
+
+	for(i=0;i<n;i++)
+	{
+		if (a[i]>avg)
+		{
+		printf("%d\n",a[i]);
+		}
+	}	
+}
